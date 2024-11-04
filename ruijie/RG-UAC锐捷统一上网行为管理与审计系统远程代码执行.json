@@ -1,0 +1,14 @@
+{
+	"name":"RG-UAC锐捷统一上网行为管理与审计系统远程代码执行",
+	"tag":"ruijie",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/view/vpn/autovpn/online_check.php",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(iii:)"
+	}
+}

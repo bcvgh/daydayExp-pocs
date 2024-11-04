@@ -1,0 +1,43 @@
+{
+  "tagname": {
+    "anheng": "安恒",
+    "dahua": "大华",
+    "fanwei": "泛微",
+    "jeecg-boot": "jeecg-boot",
+    "lvmeng": "绿盟",
+    "shenxinfu": "深信服",
+    "sifudi": "思福迪",
+    "yongyou": "用友",
+    "zhiyuan": "致远",
+    "hongjing": "宏景",
+    "fanruan": "帆软",
+    "hikvision": "海康威视",
+    "yisaitong": "亿赛通",
+    "hongfan" : "红帆",
+    "wanhu" : "万户",
+    "feiqihulian" : "飞企互联",
+    "lanling" : "蓝凌",
+    "huace" : "华测",
+    "PROSCEND" : "PROSCEND",
+    "ruijie" : "锐捷",
+    "jinshan" : "金山",
+    "huaxia" : "华夏",
+    "qianxin" : "奇安信",
+    "jindie" : "金蝶",
+    "ruiyou" : "瑞友",
+    "qiyuesuo" : "契约锁",
+    "shandao" : "禅道"
+  },
+  "dnslog": {
+    "type": "ceye",
+    "api" : "http://api.ceye.io/v1/records?token={{token}}&type=dns&filter=",
+    "token": "be94361a3b2d8f6ec7dfe0a3275ab79e",
+  }
+}
+
+//  "dnslog": {
+//    "type": "dnslog",
+//    "api" : "https://dnslog.org/{{token}}?domain=dnslog.store.",
+//    "token": "ws196fx2x689",
+//  }
+

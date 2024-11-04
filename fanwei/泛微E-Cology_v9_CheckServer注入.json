@@ -1,0 +1,1 @@
+{  "num": 2,  "name":"泛微E-Cology_v9_CheckServer注入",  "tag":"fanwei",  "type":"other",  "poc": {    "pocGet": "/mobile/plugin/CheckServer.jsp?type=mobileSetting&timestamp=1231231231",    "header": {      "content-type": "text/plain",      "User-Agent": "Mozilla/5.0 (Linux;"    },    "status_code":"200",    "pattern": "(system error)"  }}

